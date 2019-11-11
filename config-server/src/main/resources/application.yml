@@ -1,0 +1,8 @@
+spring:
+    cloud:
+        config:
+            server:
+                git:
+                    uri: file://${user.home}/projetos/event-sourcing-app/
+                    search-paths:
+                        - "config-properties/{application}/{profile}"
