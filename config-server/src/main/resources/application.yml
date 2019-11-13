@@ -3,6 +3,6 @@ spring:
         config:
             server:
                 git:
-                    uri: file://${user.home}/projetos/event-sourcing-app/
+                    uri: file://${user.home}/projetos/microservices/
                     search-paths:
                         - "config-properties/{application}/{profile}"

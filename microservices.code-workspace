@@ -4,10 +4,16 @@
 			"path": "config-properties"
 		},
 		{
+			"path": "discovery"
+		},
+		{
 			"path": "config-server"
 		},
 		{
-			"path": "discovery"
+			"path": "."
+		},
+		{
+			"path": "user"
 		}
 	],
 	"settings": {

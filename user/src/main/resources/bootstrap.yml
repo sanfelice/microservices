@@ -1,0 +1,27 @@
+server:
+    port: ${port:8081}
+
+spring:
+    # h2:
+    #     console:
+    #         enabled: true
+    #         path: /h2-console2
+    # datasource:
+    #     url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    #     username: sa
+    #     password:
+    # kafka:
+    #     bootstrap-servers: localhost:9092
+    #     topic:
+    #         userCreated: USER_CREATED_TOPIC
+# spring:
+    application:
+        name: user
+    cloud:
+        config:
+            allowOverride: true
+            overrideNone: false
+            # fail-fast: true
+            discovery:
+                enabled: true
+                service-id: config-server
