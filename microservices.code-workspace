@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "mail"
+		},
+		{
+			"path": "gateway"
 		}
 	],
 	"settings": {
