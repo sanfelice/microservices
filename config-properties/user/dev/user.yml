@@ -8,6 +8,21 @@ spring:
     username: sa
     password:
   kafka:
+    consumer:
+        properties:
+          spring:
+            json:
+              trusted:
+                packages: 
+                - br.com.sanfelice.microservices 
+        value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+    producer:
+      properties:
+        spring:
+          json:
+            add:
+              type:
+                headers: false
     bootstrap-servers: localhost:9092
     topic:
       userCreated: USER_CREATED_TOPIC

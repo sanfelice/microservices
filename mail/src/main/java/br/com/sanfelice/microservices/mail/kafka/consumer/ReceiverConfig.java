@@ -43,7 +43,7 @@ public class ReceiverConfig {
     @Bean
     public ConsumerFactory<String, UserDTO> consumerFactory() {
         return new DefaultKafkaConsumerFactory<>(consumerConfigs(), new StringDeserializer(),
-                new JsonDeserializer<>(UserDTO.class));
+                new JsonDeserializer<>(UserDTO.class).ignoreTypeHeaders());
     }
 
     @Bean

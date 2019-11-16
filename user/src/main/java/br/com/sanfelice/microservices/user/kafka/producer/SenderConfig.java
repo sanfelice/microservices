@@ -36,7 +36,9 @@ public class SenderConfig {
 
     @Bean
     public ProducerFactory<String, User> producerFactory() {
-        return new DefaultKafkaProducerFactory<>(producerConfigs());
+        return new DefaultKafkaProducerFactory<>(producerConfigs(),
+        new JsonSerializer<String>().forKeys().noTypeInfo(),
+        new JsonSerializer<User>().noTypeInfo());
     }
 
     @Bean
